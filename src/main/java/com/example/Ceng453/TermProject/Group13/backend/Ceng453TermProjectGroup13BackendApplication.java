@@ -7,7 +7,7 @@ import org.springframework.stereotype.*;
 
 @Controller
 @SpringBootApplication
-public class backend {
+public class Ceng453TermProjectGroup13BackendApplication {
 
     @RequestMapping("/")
     @ResponseBody
