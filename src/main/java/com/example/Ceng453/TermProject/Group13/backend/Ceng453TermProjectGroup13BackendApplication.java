@@ -16,6 +16,6 @@ public class Ceng453TermProjectGroup13BackendApplication {
     }
 
     public static void main(String[] args) {
-        SpringApplication.run(DemoApplication.class, args);
+        SpringApplication.run(Ceng453TermProjectGroup13BackendApplication.class, args);
     }
 }
