@@ -23,7 +23,7 @@ import static org.mockito.Mockito.*;
 public class PlayerControllerTest {
 
     @Autowired
-    private PlayerService playerController;
+    private PlayerController playerController;
 
     @Test
     public void registerPlayerTest() {
@@ -31,7 +31,7 @@ public class PlayerControllerTest {
         player.setUsername("player1");
         player.setPassword("password1");
         player.setEmail("email1");
-        Player newPlayer = playerController.registerPlayer(player);
+        Player newPlayer = playerController.registerPlayer(player).getBody();
         Assert.assertEquals(player, newPlayer);
     }
 
