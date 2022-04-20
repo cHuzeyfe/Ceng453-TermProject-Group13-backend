@@ -35,7 +35,7 @@ public class PlayerServiceTest {
         when(playerRepository.existsByUsername(anyString())).thenReturn(false);
         when(playerRepository.save(any())).thenReturn(player);
 
-        Player newPlayer = playerService.registerPlayer(player);
+        Player newPlayer = playerService.registerPlayer(player).getBody();
         assertNotNull(newPlayer);
         verify(playerRepository).save(any());
     }
@@ -50,7 +50,7 @@ public class PlayerServiceTest {
 
         when(playerRepository.existsByUsername(anyString())).thenReturn(true);
 
-        Player newPlayer = playerService.registerPlayer(player);
+        Player newPlayer = playerService.registerPlayer(player).getBody();
 
         assertNull(newPlayer);
     }
@@ -65,7 +65,7 @@ public class PlayerServiceTest {
 
         when(playerRepository.existsByEmail(anyString())).thenReturn(true);
 
-        Player newPlayer = playerService.registerPlayer(player);
+        Player newPlayer = playerService.registerPlayer(player).getBody();
 
         assertNull(newPlayer);
     }

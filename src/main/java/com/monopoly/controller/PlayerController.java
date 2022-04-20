@@ -22,8 +22,12 @@ public class PlayerController {
     }
 
     @PostMapping("/register")
-    public ResponseEntity<Player> registerPlayer(@RequestBody Player player){
-        Player newPlayer = playerService.registerPlayer(player);
-        return ResponseEntity.ok(newPlayer);
-    }
+    public ResponseEntity<Player> registerPlayer(@RequestBody Player player){ return playerService.registerPlayer(player); }
+
+    @PostMapping("/login")
+    public ResponseEntity<String> loginPlayer(@RequestBody Player player){ return playerService.loginPlayer(player); }
+
+    @PostMapping("/resetPassword")
+    public ResponseEntity<String> resetPassword(@RequestBody String email) {return playerService.resetPassword(email);}
+
 }
