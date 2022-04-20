@@ -3,6 +3,8 @@ package com.monopoly.controller;
 import com.monopoly.entity.Player;
 import com.monopoly.service.PlayerService;
 import org.springframework.http.ResponseEntity;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
