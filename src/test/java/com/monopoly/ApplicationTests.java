@@ -1,10 +1,10 @@
-package com.example.Ceng453.TermProject.Group13.backend;
+package com.monopoly;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class Ceng453TermProjectGroup13BackendApplicationTests {
+class ApplicationTests {
 
 	@Test
 	void contextLoads() {
