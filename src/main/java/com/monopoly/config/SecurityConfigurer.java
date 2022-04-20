@@ -38,9 +38,10 @@ public class SecurityConfigurer extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception {
         http
                 .authorizeRequests()
-                .antMatchers("/api/player/register").permitAll()
-                .antMatchers("/api/player/login").permitAll()
-                .antMatchers("/api/player/resetPassword").permitAll()
+                .antMatchers("/player").permitAll()
+                .antMatchers("/player/register").permitAll()
+                .antMatchers("/player/login").permitAll()
+                .antMatchers("/player/resetPassword").permitAll()
                 .antMatchers("/swagger-ui.html**").permitAll()
                 .anyRequest()
                 .fullyAuthenticated()
